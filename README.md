@@ -97,11 +97,9 @@ The chatbot provides an intelligent and interactive registration experience with
 * **Analytics & Logging** — Maintains conversation and intent logs for analysis.
 * **Gemini AI Fallback** — Provides AI-powered responses when a predefined response is not available.
 
-## Project Architecture
-
+Project Architecture:
 The chatbot follows a structured conversational workflow:
-
-**User Input → Rasa NLU → Intent Recognition → Entity Extraction → Validation → Custom Actions → Registration Management → Response**
+User Input → Rasa NLU → Intent Recognition → Entity Extraction → Validation → Custom Actions → Registration Management → Response
 
  Main Components:
 * **Rasa NLU** — Processes user messages and identifies intents.
