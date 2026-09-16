@@ -103,8 +103,7 @@ The chatbot follows a structured conversational workflow:
 
 **User Input → Rasa NLU → Intent Recognition → Entity Extraction → Validation → Custom Actions → Registration Management → Response**
 
-### Main Components
-
+ Main Components:
 * **Rasa NLU** — Processes user messages and identifies intents.
 * **NLTK** — Performs Natural Language Processing tasks.
 * **scikit-learn** — Provides machine learning-based intent classification.
@@ -114,10 +113,8 @@ The chatbot follows a structured conversational workflow:
 * **Flask** — Provides the web interface and admin dashboard.
 * **Logging System** — Records conversations and intent analytics for monitoring and analysis.
 
-## Future Improvements
-
+Future Improvements:
 The project can be further enhanced with the following improvements:
-
 * Integration with a dedicated database such as MySQL or MongoDB.
 * User authentication and secure admin access.
 * Voice-based interaction and speech recognition.
@@ -127,8 +124,7 @@ The project can be further enhanced with the following improvements:
 * Mobile-friendly interface and responsive design.
 * Automated email or notification support for registration updates.
 
-## Thank You
-
+Thank You
 Thank you for visiting this project. If you find this project useful or interesting, feel free to explore the repository and give it a star.
 
 
