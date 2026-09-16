@@ -20,14 +20,13 @@
 - 🌐 Flask Web Interface
   
 ## 🛠️ Technologies Used
-
-**Programming:** Python  
-**Chatbot:** Rasa  
-**NLP:** NLTK  
-**Machine Learning:** scikit-learn  
-**Web:** Flask, HTML, CSS, JavaScript  
-**AI:** Gemini API  
-**Data:** Pandas, Excel
+Programming: Python  
+Chatbot: Rasa  
+NLP: NLTK  
+Machine Learning: scikit-learn  
+Web: Flask, HTML, CSS, JavaScript  
+AI: Gemini API  
+Data:Pandas, Excel
 
 ## 🎯 About the Project
 
@@ -86,30 +85,30 @@ The chatbot understands the user's message, identifies the required information,
 
 The chatbot provides an intelligent and interactive registration experience with multiple AI-powered capabilities:
 
-* **Natural Language Understanding** — Understands user messages and identifies their intent.
-* **Entity Extraction** — Extracts important details such as name, email, phone number, domain, and duration.
-* **Smart Validation** — Validates user information and handles incorrect or duplicate details.
-* **Multilingual Interaction** — Supports English and Hindi/Hinglish conversations.
-* **Sentiment Analysis** — Detects positive and negative user sentiment during conversations.
-* **FAQ Support** — Answers common registration-related questions.
-* **Registration Management** — Supports checking, editing, and cancelling registrations.
-* **Admin Dashboard** — Provides registration statistics and intent analytics.
-* **Analytics & Logging** — Maintains conversation and intent logs for analysis.
-* **Gemini AI Fallback** — Provides AI-powered responses when a predefined response is not available.
+* Natural Language Understanding — Understands user messages and identifies        their intent.
+* Entity Extraction — Extracts important details such as name, email, phone        number, domain, and duration.
+* Smart Validation — Validates user information and handles incorrect or           duplicate details.
+* Multilingual Interaction — Supports English and Hindi/Hinglish conversations.
+* Sentiment Analysis — Detects positive and negative user sentiment during         conversations.
+* FAQ Support — Answers common registration-related questions.
+* Registration Management — Supports checking, editing, and cancelling             registrations.
+* Admin Dashboard— Provides registration statistics and intent analytics.
+* Analytics & Logging — Maintains conversation and intent logs for analysis.
+* Gemini AI Fallback — Provides AI-powered responses when a predefined response    is not available.
 
 Project Architecture:
 The chatbot follows a structured conversational workflow:
 User Input → Rasa NLU → Intent Recognition → Entity Extraction → Validation → Custom Actions → Registration Management → Response
 
  Main Components:
-* **Rasa NLU** — Processes user messages and identifies intents.
-* **NLTK** — Performs Natural Language Processing tasks.
-* **scikit-learn** — Provides machine learning-based intent classification.
-* **Custom Actions** — Handles registration, validation, editing, cancellation, FAQs, and other operations.
-* **Pandas & Excel** — Stores and manages registration records.
-* **Gemini AI** — Provides intelligent fallback responses.
-* **Flask** — Provides the web interface and admin dashboard.
-* **Logging System** — Records conversations and intent analytics for monitoring and analysis.
+* Rasa NLU — Processes user messages and identifies intents.
+* NLTK — Performs Natural Language Processing tasks.
+* scikit-learn — Provides machine learning-based intent classification.
+* Custom Actions — Handles registration, validation, editing, cancellation,        FAQs, and other operations.
+* Pandas & Excel — Stores and manages registration records.
+* Gemini AI — Provides intelligent fallback responses.
+* Flask — Provides the web interface and admin dashboard.
+* Logging System — Records conversations and intent analytics for monitoring and   analysis.
 
 Future Improvements:
 The project can be further enhanced with the following improvements:
