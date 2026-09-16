@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Registration Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+<div class="app-container">
+
+    <header class="chat-header">
+
+        <div>
+
+            <h1>🤖 AI Registration Assistant</h1>
+
+            <p>
+                Internship Registration Chatbot
+            </p>
+
+        </div>
+
+        <a href="/admin"
+           class="admin-button">
+            Admin Dashboard
+        </a>
+
+    </header>
+
+
+    <main class="chat-box">
+
+        <div id="messages"
+             class="messages">
+
+            <div class="message bot">
+
+                <div class="avatar">
+                    🤖
+                </div>
+
+                <div class="bubble">
+
+                    Hello! 👋
+
+                    <br><br>
+
+                    Welcome to the Internship Registration Assistant.
+
+                    <br><br>
+
+                    I can help you with registration,
+                    eligibility, status, FAQs and more.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="typing"
+             id="typing">
+
+            Bot is typing...
+
+        </div>
+
+
+        <form id="chat-form"
+              class="chat-input-area">
+
+            <input
+                type="text"
+                id="message-input"
+                placeholder="Type your message..."
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit">
+                Send
+            </button>
+
+        </form>
+
+    </main>
+
+</div>
+
+
+<script>
+
+const form =
+    document.getElementById("chat-form");
+
+const input =
+    document.getElementById("message-input");
+
+const messages =
+    document.getElementById("messages");
+
+const typing =
+    document.getElementById("typing");
+
+
+function addMessage(
+    text,
+    sender
+) {
+
+    const messageDiv =
+        document.createElement("div");
+
+    messageDiv.className =
+        "message " + sender;
+
+
+    const avatar =
+        document.createElement("div");
+
+    avatar.className =
+        "avatar";
+
+    avatar.textContent =
+        sender === "user"
+        ? "👤"
+        : "🤖";
+
+
+    const bubble =
+        document.createElement("div");
+
+    bubble.className =
+        "bubble";
+
+
+    bubble.innerHTML =
+        text.replace(
+            /\n/g,
+            "<br>"
+        );
+
+
+    messageDiv.appendChild(
+        avatar
+    );
+
+    messageDiv.appendChild(
+        bubble
+    );
+
+
+    messages.appendChild(
+        messageDiv
+    );
+
+
+    messages.scrollTop =
+        messages.scrollHeight;
+}
+
+
+form.addEventListener(
+    "submit",
+    async function(event) {
+
+        event.preventDefault();
+
+
+        const message =
+            input.value.trim();
+
+
+        if (!message) {
+            return;
+        }
+
+
+        addMessage(
+            message,
+            "user"
+        );
+
+
+        input.value = "";
+
+        input.disabled = true;
+
+
+        typing.style.display =
+            "block";
+
+
+        try {
+
+            const response =
+                await fetch(
+                    "/chat",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body: JSON.stringify({
+                            message: message
+                        })
+                    }
+                );
+
+
+            const data =
+                await response.json();
+
+
+            typing.style.display =
+                "none";
+
+
+            if (data.success) {
+
+                data.messages.forEach(
+                    function(botMessage) {
+
+                        addMessage(
+                            botMessage,
+                            "bot"
+                        );
+
+                    }
+                );
+
+            } else {
+
+                addMessage(
+                    "⚠️ " + data.message,
+                    "bot"
+                );
+
+            }
+
+
+        } catch (error) {
+
+            typing.style.display =
+                "none";
+
+
+            addMessage(
+                "⚠️ Unable to connect to the server.",
+                "bot"
+            );
+
+            console.error(error);
+
+        }
+
+
+        input.disabled = false;
+
+        input.focus();
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+version: "3.1"
+
+stories:
+
+- story: Complete registration flow
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: register
+    - action: action_start_registration
+    - intent: provide_name
+    - action: action_validate_registration
+    - intent: provide_email
+    - action: action_validate_registration
+    - intent: provide_phone
+    - action: action_validate_registration
+    - intent: provide_education
+    - action: action_validate_registration
+    - intent: provide_city
+    - action: action_validate_registration
+    - action: action_save_registration
+
+- story: Registration with Hindi/Hinglish
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: register
+    - action: action_start_registration
+    - intent: provide_name
+    - action: action_validate_registration
+    - intent: provide_email
+    - action: action_validate_registration
+    - intent: provide_phone
+    - action: action_validate_registration
+    - intent: provide_education
+    - action: action_validate_registration
+    - intent: provide_city
+    - action: action_validate_registration
+    - action: action_save_registration
+
+- story: Check registration status
+  steps:
+    - intent: ask_registration_status
+    - action: action_check_registration
+
+- story: Ask eligibility
+  steps:
+    - intent: ask_eligibility
+    - action: utter_eligibility
+
+- story: Edit registration
+  steps:
+    - intent: ask_edit_registration
+    - action: action_start_edit_registration
+
+- story: FAQ conversation
+  steps:
+    - intent: faq
+    - action: action_handle_faq
+
+- story: User is happy
+  steps:
+    - intent: mood_positive
+    - action: utter_positive
+
+- story: User is frustrated
+  steps:
+    - intent: mood_negative
+    - action: utter_negative
+
+- story: Unknown question
+  steps:
+    - intent: out_of_scope
+    - action: action_gemini_fallback

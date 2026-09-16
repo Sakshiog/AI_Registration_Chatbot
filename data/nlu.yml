@@ -1,0 +1,419 @@
+version: "3.1"
+
+nlu:
+
+- regex: phone_number
+  examples: |
+    - ^\d{10}$
+
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good afternoon
+    - good evening
+    - hlo
+    - hii
+    - namaste
+    - namaskar
+    - hello bot
+    - hi there
+    - hey there
+    - mujhe help chahiye
+    - registration ke liye help chahiye
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - see you later
+    - thank you bye
+    - thanks bye
+    - okay bye
+    - milte hain
+    - fir milte hain
+
+- intent: register
+  examples: |
+    - I want to register
+    - I want to register for the internship
+    - I want to apply
+    - I want to apply for internship
+    - how can I register
+    - how do I register
+    - start my registration
+    - registration karni hai
+    - mujhe registration karna hai
+    - internship ke liye register karna hai
+    - apply karna hai
+    - registration start karo
+    - main apply karna chahta hoon
+    - main apply karna chahti hoon
+
+- intent: provide_name
+  examples: |
+    - my name is [Sakshi](name)
+    - my name is [Rahul](name)
+    - my name is [Priya](name)
+    - I am [Sakshi](name)
+    - I am [Rahul](name)
+    - I am [Priya](name)
+    - I am [Sakshi Yadav](name)
+    - I am [Rahul Sharma](name)
+    - I am [Priya Singh](name)
+    - my full name is [Sakshi Yadav](name)
+    - my full name is [Rahul Sharma](name)
+    - my full name is [Priya Singh](name)
+    - name is [Sakshi](name)
+    - name is [Rahul](name)
+    - name is [Priya](name)
+    - [Sakshi](name)
+    - [Rahul](name)
+    - [Priya](name)
+    - [Sakshi Yadav](name)
+    - [Rahul Sharma](name)
+    - [Priya Singh](name)
+    - mera naam [Sakshi](name) hai
+    - mera naam [Rahul](name) hai
+    - mera naam [Priya](name) hai
+    - mera naam [Sakshi Yadav](name) hai
+    - mera naam [Rahul Sharma](name) hai
+    - mera naam [Priya Singh](name) hai
+    - main [Sakshi](name) hoon
+    - main [Rahul](name) hoon
+    - main [Priya](name) hoon
+    - naam [Sakshi](name) hai
+    - naam [Rahul](name) hai
+    - naam [Priya](name) hai
+
+- intent: provide_email
+  examples: |
+    - [A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z][A-Za-z][A-Za-z]*
+    - my email is [test@gmail.com](email)
+    - email is [test@gmail.com](email)
+    - my email address is [abc@gmail.com](email)
+    - you can contact me at [test@gmail.com](email)
+    - mera email [test@gmail.com](email) hai
+    - email id [abc@gmail.com](email) hai
+    - my mail is [user@gmail.com](email)
+    - [test@gmail.com](email)
+    - [abc@gmail.com](email)
+    - [user@gmail.com](email)
+    - [sakshi@gmail.com](email)
+    - [sakshi.test@gmail.com](email)
+    - [newtest2026@example.com](email)
+    - [hello2026@gmail.com](email)
+    - [student2026@yahoo.com](email)
+    - [user123@gmail.com](email)
+    - [abc123@outlook.com](email)
+    - [sakshi.yadav@gmail.com](email)
+    - [rahul123@gmail.com](email)
+    - [student.test@outlook.com](email)
+    - [contact2026@gmail.com](email)
+    - email [student2026@gmail.com](email)
+    - my email id is [student123@gmail.com](email)
+    - my email address is [user123@gmail.com](email)
+    - you can email me at [contact@gmail.com](email)
+    - please use [student@gmail.com](email)
+
+- intent: provide_phone
+  examples: |
+    - my phone number is [9876543210](phone)
+    - my mobile number is [9876543210](phone)
+    - phone is [9876543210](phone)
+    - contact number is [9876543210](phone)
+    - mera phone number [9876543210](phone) hai
+    - mobile number [9876543210](phone) hai
+    - mera number [9876543210](phone) hai
+    - [8787261434](phone)
+    - [9988776655](phone)
+    - [9012345678](phone)
+    - [8123456789](phone)
+    - [7896541230](phone)
+    - [9345678120](phone)
+
+- intent: provide_education
+  examples: |
+    - I am pursuing [BTech](education)
+    - I am a [BTech](education) student
+    - I am doing [BTech in computer science](education)
+    - I completed [BTech](education)
+    - I am studying [computer science](education)
+    - I am a [computer science](education) student
+    - my qualification is [BTech](education)
+    - I am pursuing [graduation](education)
+    - main [BTech](education) kar rahi hoon
+    - main [computer science](education) ki student hoon
+    - meri qualification [BTech](education) hai
+    - main [graduation](education) kar rahi hoon
+    - [class 12](education)
+    - [class 10](education)
+    - I have completed [12th](education)
+    - I have completed [10th](education)
+    - [BTech](education)
+    - [B.Tech](education)
+    - [MTech](education)
+    - [BSc](education)
+    - [MSc](education)
+    - [BCom](education)
+    - [MBA](education)
+    - [graduate](education)
+    - [postgraduate](education)
+    - [diploma](education)
+    - [b.tech](education)
+    - [btech](education)
+    - [B.Tech](education)
+    - [BTECH](education)
+    - [btech cse](education)
+    - [B.Tech CSE](education)
+    - [B.Tech Computer Science](education)
+    - [b.tech computer science](education)
+    - I am pursuing [B.Tech](education)
+    - I am pursuing [b.tech](education)
+    - I am doing [B.Tech](education)
+    - I am doing [b.tech](education)
+    - my qualification is [B.Tech](education)
+    - meri qualification [B.Tech](education) hai
+    - main [B.Tech](education) kar rahi hoon
+    - main [b.tech](education) kar rahi hoon
+
+- intent: provide_city
+  examples: |
+    - I live in [Jaipur](city)
+    - I am from [Jaipur](city)
+    - my city is [Jaipur](city)
+    - I live in [Delhi](city)
+    - I am from [Delhi](city)
+    - I live in [Mumbai](city)
+    - I am from [Mumbai](city)
+    - I live in [Gurgaon](city)
+    - I am from [Gurgaon](city)
+    - my city is [Gurgaon](city)
+    - main [Jaipur](city) se hoon
+    - main [Delhi](city) se hoon
+    - main [Gurgaon](city) mein rehti hoon
+    - meri city [Jaipur](city) hai
+    - [Jaunpur](city)
+    - [Lucknow](city)
+    - [Indore](city)
+    - [Kanpur](city)
+    - [Ahmedabad](city)
+    - [Jaipur](city)
+    - [Gurugram](city)
+    - [Gurgaon](city)
+    - [Delhi](city)
+    - [Jaipur](city)
+    - [Mumbai](city)
+    - [Pune](city)
+    - [Noida](city)
+    - [Bangalore](city)
+    - [Kanpur](city)
+    - [Ahmedabad](city)
+    - I live in [Gurugram](city)
+    - My city is [Gurgaon](city)
+    - I am from [Delhi](city)
+    - I live in [Jaipur](city)
+    - I live in [Mumbai](city)
+    - I am from [Pune](city)
+    - I live in [Noida](city)
+    - My city is [Bangalore](city)
+    - My city is [Kanpur](city)
+    - I am from [Ahmedabad](city)
+
+- intent: ask_registration_status
+  examples: |
+    - what is my registration status
+    - check my registration status
+    - can I check my registration
+    - has my registration been completed
+    - is my registration successful
+    - registration status kya hai
+    - meri registration ka status kya hai
+    - registration complete hui kya
+    - mera registration check karo
+    - application status kya hai
+
+- intent: ask_eligibility
+  examples: |
+    - am I eligible
+    - who is eligible
+    - what is the eligibility
+    - eligibility criteria kya hai
+    - kya main eligible hoon
+    - internship ke liye eligibility kya hai
+    - kaun apply kar sakta hai
+    - qualification kya honi chahiye
+    - eligibility batao
+
+- intent: ask_edit_registration
+  examples: |
+    - I want to edit my registration
+    - can I edit my details
+    - I entered wrong information
+    - I want to change my details
+    - can I update my registration
+    - registration edit karni hai
+    - details change karni hai
+    - galat information enter ho gayi
+    - meri details update karni hai
+    - registration mein correction karni hai
+
+- intent: ask_cancel_registration
+  examples: |
+    - I want to cancel my registration
+    - cancel my application
+    - I want to withdraw my registration
+    - can I cancel my registration
+    - registration cancel karni hai
+    - mera registration cancel karo
+    - application withdraw karni hai
+    - registration nahi karni
+    - meri application cancel kar do
+
+- intent: faq
+  examples: |
+    - what is this internship
+    - tell me about the internship
+    - what is this registration
+    - what is the registration process
+    - registration process
+    - registration requirements
+    - what are the registration requirements
+    - what are the requirements for registration
+    - what information is needed for registration
+    - what information do I need to register
+    - what details are required for registration
+    - what details do I need to provide
+    - what do I need for registration
+    - what do I need to register
+    - requirements for registration
+    - information required for registration
+    - details required for registration
+    - registration information
+    - tell me about registration requirements
+    - can you tell me the registration requirements
+    - explain the registration process
+    - tell me the registration process
+    - I want information about registration
+    - mujhe registration ke baare mein batao
+    - registration ke liye kya chahiye
+    - registration ke liye kya details chahiye
+    - registration ke liye kya required hai
+    - registration ke liye kaunsi information chahiye
+    - registration process kya hai
+    - registration ka process batao
+    - registration ke requirements kya hain
+
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - sure
+    - okay
+    - ok
+    - correct
+    - yes please
+    - haan
+    - ha
+    - ji haan
+    - bilkul
+    - yes that's right
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - not now
+    - no thanks
+    - I don't want to
+    - nahi
+    - nahi chahiye
+    - abhi nahi
+    - no I don't want that
+
+- intent: mood_positive
+  examples: |
+    - great
+    - awesome
+    - amazing
+    - good
+    - that's helpful
+    - very helpful
+    - thank you so much
+    - nice
+    - bahut accha
+    - achha laga
+    - thank you
+    - thanks
+
+- intent: mood_negative
+  examples: |
+    - this is frustrating
+    - I am frustrated
+    - I am angry
+    - this is annoying
+    - you are not helping
+    - I am disappointed
+    - problem aa rahi hai
+    - mujhe problem ho rahi hai
+    - ye kaam nahi kar raha
+    - bahut irritating hai
+    - mujhe samajh nahi aa raha
+    - ye galat hai
+
+- intent: out_of_scope
+  examples: |
+    - tell me a joke
+    - what is the weather
+    - who is the prime minister
+    - play a song
+    - tell me a story
+    - what is bitcoin
+    - help me with mathematics
+    - write a poem
+    - what is cricket
+    - mujhe joke sunao
+    - weather kaisa hai
+    - ek story batao
+
+- intent: ask_help
+  examples: |
+    - i have an issue
+    - i have a issue
+    - I have an issue
+    - I have a issue
+    - i have issue
+    - I have issue
+    - i have a problem
+    - I have a problem
+    - i have problem
+    - I have problem
+    - there is an issue
+    - there is a issue
+    - there is a problem
+    - something is wrong
+    - something went wrong
+    - i am facing an issue
+    - I am facing an issue
+    - i am facing a problem
+    - I am facing a problem
+    - i need help
+    - I need help
+    - i need some help
+    - I need some help
+    - please help me
+    - Please help me
+    - can you help me
+    - Can you help me
+    - could you help me
+    - i need assistance
+    - I need assistance
+    - can you assist me
+    - I need support
+    - i need support
+    - help
+    - can you help
+    - please help

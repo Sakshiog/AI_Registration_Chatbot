@@ -1,0 +1,353 @@
+version: "3.1"
+
+nlu:
+- regex: phone_number
+  examples: |
+    - ^\d{10}$
+
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good afternoon
+    - good evening
+    - hlo
+    - hii
+    - namaste
+    - namaskar
+    - hello bot
+    - hi there
+    - hey there
+    - mujhe help chahiye
+    - registration ke liye help chahiye
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - see you later
+    - thank you bye
+    - thanks bye
+    - okay bye
+    - milte hain
+    - fir milte hain
+
+- intent: register
+  examples: |
+    - I want to register
+    - I want to register for the internship
+    - I want to apply
+    - I want to apply for internship
+    - how can I register
+    - how do I register
+    - start my registration
+    - registration karni hai
+    - mujhe registration karna hai
+    - internship ke liye register karna hai
+    - apply karna hai
+    - registration start karo
+    - main apply karna chahta hoon
+    - main apply karna chahti hoon
+
+- intent: provide_name
+  examples: |
+    - my name is Sakshi
+    - my name is Rahul
+    - my name is Priya
+    - I am Sakshi
+    - I am Rahul
+    - I am Priya
+    - I am Sakshi Yadav
+    - I am Rahul Sharma
+    - I am Priya Singh
+    - my full name is Sakshi Yadav
+    - my full name is Rahul Sharma
+    - my full name is Priya Singh
+    - name is Sakshi
+    - name is Rahul
+    - name is Priya
+    - Sakshi
+    - Rahul
+    - Priya
+    - Sakshi Yadav
+    - Rahul Sharma
+    - Priya Singh
+    - mera naam Sakshi hai
+    - mera naam Rahul hai
+    - mera naam Priya hai
+    - mera naam Sakshi Yadav hai
+    - mera naam Rahul Sharma hai
+    - mera naam Priya Singh hai
+    - main Sakshi hoon
+    - main Rahul hoon
+    - main Priya hoon
+    - naam Sakshi hai
+    - naam Rahul hai
+    - naam Priya hai
+
+- intent: provide_email
+  examples: |
+    - my email is test@gmail.com
+    - email is test@gmail.com
+    - my email address is abc@gmail.com
+    - you can contact me at test@gmail.com
+    - mera email test@gmail.com hai
+    - email id abc@gmail.com hai
+    - my mail is user@gmail.com
+    - sakshi.test@gmail.com
+    - test@gmail.com
+    - abc@gmail.com
+    - user@gmail.com
+    - yadavsara2006@gmail.com
+    - sakshiiyadav10@gmail.com
+    - my email is sakshi.test@gmail.com
+    - email is sakshi.test@gmail.com
+    - sakshi@gmail.com
+    - my email address is sakshi@gmail.com
+
+- intent: provide_phone
+  examples: |
+    - my phone number is 9876543210
+    - my mobile number is 9876543210
+    - phone is 9876543210
+    - contact number is 9876543210
+    - mera phone number 9876543210 hai
+    - mobile number 9876543210 hai
+    - mera number 9876543210 hai
+    - 8787261434
+    - 9988776655
+    - 9012345678
+    - 8123456789
+    - 7896541230
+    - 9345678120
+
+- intent: provide_education
+  examples: |
+    - I am pursuing BTech
+    - I am a BTech student
+    - I am doing BTech in computer science
+    - I completed BTech
+    - I am studying computer science
+    - I am a computer science student
+    - my qualification is BTech
+    - I am pursuing graduation
+    - main BTech kar rahi hoon
+    - main computer science ki student hoon
+    - meri qualification BTech hai
+    - main graduation kar rahi hoon
+    - class 12
+    - class 10
+    - I have completed 12th
+    - I have completed 10th
+    - BTech
+    - B.Tech
+    - MTech
+    - BSc
+    - MSc
+    - BCom
+    - MBA
+    - graduate
+    - postgraduate
+    - diploma
+
+- intent: provide_city
+  examples: |
+    - I live in Jaipur
+    - I am from Jaipur
+    - my city is Jaipur
+    - I live in Delhi
+    - I am from Delhi
+    - I live in Mumbai
+    - I am from Mumbai
+    - I live in Gurgaon
+    - I am from Gurgaon
+    - my city is Gurgaon
+    - main Jaipur se hoon
+    - main Delhi se hoon
+    - main Gurgaon mein rehti hoon
+    - meri city Jaipur hai
+    - jaunpur
+    - lucknow
+    - indore
+    - kanpur
+    - ahmedabad
+    - jaipur
+
+- intent: ask_registration_status
+  examples: |
+    - what is my registration status
+    - check my registration status
+    - can I check my registration
+    - has my registration been completed
+    - is my registration successful
+    - registration status kya hai
+    - meri registration ka status kya hai
+    - registration complete hui kya
+    - mera registration check karo
+    - application status kya hai
+
+- intent: ask_eligibility
+  examples: |
+    - am I eligible
+    - who is eligible
+    - what is the eligibility
+    - eligibility criteria kya hai
+    - kya main eligible hoon
+    - internship ke liye eligibility kya hai
+    - kaun apply kar sakta hai
+    - qualification kya honi chahiye
+    - eligibility batao
+
+- intent: ask_edit_registration
+  examples: |
+    - I want to edit my registration
+    - can I edit my details
+    - I entered wrong information
+    - I want to change my details
+    - can I update my registration
+    - registration edit karni hai
+    - details change karni hai
+    - galat information enter ho gayi
+    - meri details update karni hai
+    - registration mein correction karni hai
+
+- intent: ask_cancel_registration
+  examples: |
+    - I want to cancel my registration
+    - cancel my application
+    - I want to withdraw my registration
+    - can I cancel my registration
+    - registration cancel karni hai
+    - mera registration cancel karo
+    - application withdraw karni hai
+    - registration nahi karni
+    - meri application cancel kar do
+
+- intent: faq
+  examples: |
+    - what is this internship
+    - tell me about the internship
+    - what does this program offer
+    - internship kitne months ki hai
+    - internship kab start hogi
+    - internship online hai kya
+    - work from home available hai kya
+    - certificate milega kya
+    - internship ke baad certificate milega
+    - program ke baare mein batao
+    - is there any certificate
+    - what are the benefits
+
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - sure
+    - okay
+    - ok
+    - correct
+    - yes please
+    - haan
+    - ha
+    - ji haan
+    - bilkul
+    - yes that's right
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - not now
+    - no thanks
+    - I don't want to
+    - nahi
+    - nahi chahiye
+    - abhi nahi
+    - no I don't want that
+
+- intent: mood_positive
+  examples: |
+    - great
+    - awesome
+    - amazing
+    - good
+    - that's helpful
+    - very helpful
+    - thank you so much
+    - nice
+    - bahut accha
+    - achha laga
+    - thank you
+    - thanks
+
+- intent: mood_negative
+  examples: |
+    - this is frustrating
+    - I am frustrated
+    - I am angry
+    - this is annoying
+    - you are not helping
+    - I am disappointed
+    - problem aa rahi hai
+    - mujhe problem ho rahi hai
+    - ye kaam nahi kar raha
+    - bahut irritating hai
+    - mujhe samajh nahi aa raha
+    - ye galat hai
+
+- intent: out_of_scope
+  examples: |
+    - tell me a joke
+    - what is the weather
+    - who is the prime minister
+    - play a song
+    - tell me a story
+    - what is bitcoin
+    - help me with mathematics
+    - write a poem
+    - what is cricket
+    - mujhe joke sunao
+    - weather kaisa hai
+    - ek story batao
+
+- intent: ask_help
+  examples: |
+    - i have an issue
+    - i have a issue
+    - I have an issue
+    - I have a issue
+    - i have issue
+    - I have issue
+    - i have a problem
+    - I have a problem
+    - i have problem
+    - I have problem
+    - there is an issue
+    - there is a issue
+    - there is a problem
+    - something is wrong
+    - something went wrong
+    - i am facing an issue
+    - I am facing an issue
+    - i am facing a problem
+    - I am facing a problem
+    - i need help
+    - I need help
+    - i need some help
+    - I need some help
+    - please help me
+    - Please help me
+    - can you help me
+    - Can you help me
+    - could you help me
+    - i need assistance
+    - I need assistance
+    - can you assist me
+    - I need support
+    - i need support
+    - help
+    - can you help
+    - please help

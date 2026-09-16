@@ -1,0 +1,159 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - register
+  - ask_help
+  - provide_name
+  - provide_email
+  - provide_phone
+  - provide_education
+  - provide_city
+  - ask_registration_status
+  - ask_eligibility
+  - ask_edit_registration
+  - ask_cancel_registration
+  - faq
+  - affirm
+  - deny
+  - mood_positive
+  - mood_negative
+  - out_of_scope
+
+entities:
+  - name
+  - email
+  - phone
+  - education
+  - city
+
+slots:
+  name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name
+
+  email:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: email
+
+  phone:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: phone
+
+  education:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: education
+
+  city:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: city
+
+  status_check_mode:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+
+  edit_mode:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+
+  cancel_mode:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+
+  edit_registration_id:
+    type: text
+    initial_value: null
+    mappings:
+      - type: custom
+
+  edit_field:
+    type: text
+    initial_value: null
+    mappings:
+      - type: custom
+
+responses:
+
+  utter_greet:
+    - text: "Hello! 👋 Welcome to the Internship Registration Assistant. How can I help you?"
+
+  utter_goodbye:
+    - text: "Thank you for using the Registration Assistant. Have a great day! 😊"
+
+  utter_ask_help:
+    - text: "Yes, of course! 😊 How can I help you?"
+
+  utter_ask_name:
+    - text: "Sure! Please enter your full name."
+
+  utter_ask_email:
+    - text: "Please provide your email address."
+
+  utter_ask_phone:
+    - text: "Please provide your 10-digit mobile number."
+
+  utter_ask_education:
+    - text: "Please tell me your highest/current educational qualification."
+
+  utter_ask_city:
+    - text: "Which city are you currently located in?"
+
+  utter_registration_success:
+    - text: "🎉 Your registration has been successfully completed!"
+
+  utter_registration_status:
+    - text: "I can help you check your registration status. Please provide your registered email."
+
+  utter_eligibility:
+    - text: "Eligibility depends on the internship/program requirements. I can help you check the relevant criteria."
+
+  utter_edit_registration:
+    - text: "Yes, registration details can be checked and updated. Please provide your registered email."
+
+  utter_cancel_registration:
+    - text: "I can help you with registration cancellation. Please provide your registered email."
+
+  utter_faq:
+    - text: "I can answer questions about registration, eligibility, status, editing, cancellation and the internship process."
+
+  utter_fallback:
+    - text: "I'm not completely sure about that. Let me try to help you with registration or your question."
+
+  utter_positive:
+    - text: "That's great! 😊 How can I help you further?"
+
+  utter_negative:
+    - text: "I'm sorry you're facing an issue. Let me help you resolve it."
+
+  utter_default:
+    - text: "Sorry, I couldn't understand that. You can ask me about registration, eligibility, status, editing or cancellation."
+
+actions:
+  - action_start_registration
+  - action_validate_registration
+  - action_save_registration
+  - action_check_registration
+  - action_start_edit_registration
+  - action_edit_registration
+  - action_start_cancel_registration
+  - action_cancel_registration
+  - action_handle_faq
+  - action_gemini_fallback
+  - action_log_conversation

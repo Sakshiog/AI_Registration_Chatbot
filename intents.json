@@ -1,0 +1,147 @@
+{
+  "intents": [
+    {
+      "tag": "GREETING",
+      "patterns": [
+        "hi",
+        "hello",
+        "hey",
+        "hii",
+        "hiii",
+        "good morning",
+        "good afternoon",
+        "good evening",
+        "how are you",
+        "hello there",
+        "hey there"
+      ]
+    },
+    {
+      "tag": "REGISTER",
+      "patterns": [
+        "I want to register",
+        "I want to apply for an internship",
+        "I want to register for an internship",
+        "I want to apply",
+        "register me",
+        "start my registration",
+        "I need to register",
+        "I would like to apply",
+        "I want a data science internship",
+        "I want to join the internship",
+        "I want to sign up",
+        "I want to apply for the internship",
+        "I want to enroll",
+        "I want to join"
+      ]
+    },
+    {
+      "tag": "CHECK",
+      "patterns": [
+        "check my registration",
+        "where is my registration",
+        "check registration status",
+        "show my registration",
+        "find my registration",
+        "I want to check my application",
+        "check my application",
+        "what is my registration status",
+        "show registration status",
+        "track my registration"
+      ]
+    },
+    {
+      "tag": "EDIT",
+      "patterns": [
+        "I want to edit my registration",
+        "change my internship domain",
+        "change my duration",
+        "update my registration",
+        "modify my registration",
+        "edit my application",
+        "update my application",
+        "change my internship",
+        "modify my application"
+      ]
+    },
+    {
+      "tag": "CANCEL",
+      "patterns": [
+        "cancel my registration",
+        "I want to cancel my application",
+        "delete my registration",
+        "cancel my internship registration",
+        "cancel my application",
+        "remove my registration",
+        "I don't want the internship anymore"
+      ]
+    },
+    {
+      "tag": "ELIGIBILITY",
+      "patterns": [
+        "Can I apply for this internship",
+        "am I eligible",
+        "what is the eligibility",
+        "what are the requirements",
+        "who can apply",
+        "what documents are required",
+        "can students apply",
+        "what is the eligibility criteria",
+        "tell me about eligibility",
+        "who is eligible for this internship"
+      ]
+    },
+    {
+      "tag": "HELP",
+      "patterns": [
+        "help",
+        "I need help",
+        "can you help me",
+        "I need support",
+        "please assist me",
+        "assist me",
+        "support me",
+        "guide me",
+        "please guide me",
+        "what can you do",
+        "how can you help me",
+        "I need assistance"
+      ]
+    },
+    {
+      "tag": "THANK_YOU",
+      "patterns": [
+        "thank you",
+        "thanks",
+        "thank you so much",
+        "thanks for helping",
+        "I appreciate it",
+        "appreciate your help",
+        "thank you for your help",
+        "thanks a lot",
+        "many thanks"
+      ]
+    },
+    {
+      "tag": "GENERAL",
+      "patterns": [
+        "what is data science",
+        "what is machine learning",
+        "tell me about internships",
+        "what is artificial intelligence",
+        "what is python",
+        "what is data analytics",
+        "tell me about data science",
+        "tell me about machine learning",
+        "I want to know something",
+        "I want to ask something",
+        "I have a question",
+        "I want to ask a question",
+        "I want information",
+        "I need some information",
+        "I have a doubt",
+        "tell me something"
+      ]
+    }
+  ]
+}

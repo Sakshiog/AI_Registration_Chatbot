@@ -1,0 +1,26 @@
+# Virtual environments
+venv/
+rasa_venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment / API keys
+.env
+
+# Logs
+*.log
+
+# Test/generated data
+chat_logs.csv
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+.rasa/
